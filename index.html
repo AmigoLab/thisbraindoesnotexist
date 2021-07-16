@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<body style="background-color:black; margin: 0; height: 100%; overflow: hidden">
 	<head>
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     	<!-- iOS meta tags -->
@@ -11,20 +12,19 @@
     	<link rel="stylesheet" type="text/css" href="papaya.css?build=1449" />
     	<script type="text/javascript" src="papaya.js?build=1449"></script>
     	<title>This brain does not exist</title>
-    	<script>
+    	<script type="text/javascript">
 	    	var index = Math.floor(Math.random()*2); 
 			var filename = "/thisbraindoesnotexist/data/"+index.toString(10)+".nii.gz";
 			var params = [];
-			// console.log("Output : " + filename); 
-			params["worldSpace"] = true;
+			params["worldSpace"] = false;
+			params["kioskMode"] = true;
         	params["images"] = [filename];
+        	params["interpolation"]=false;
 		</script>
 
 	</head>
-
-	<body>
-		
-		<div class="papaya" data-params="params"></div>
-		
-	</body>
+	<h1 style="color: white; text-align: center; font-family:arial; margin-top: 0.6em; margin-bottom: 0.2em;">This brain does not exist</h1>
+	<h5 style="color: white; text-align: center; font-family:arial; margin-top: 0.2em; margin-bottom: 0em;">Work done by <img src="/thisbraindoesnotexist/img/kcl.jpg" style="max-height:15px"> and <img src="/thisbraindoesnotexist/img/nvidia.jpg" style="max-height:15px">, using Cambridge-1, with fundinding from <img src="/thisbraindoesnotexist/img/ukri.jpeg" style="max-height:15px"> and <img src="/thisbraindoesnotexist/img/wellcome.png" style="max-height:15px"> </h5>
+	 <div class="papaya" data-params="params" style="padding-top:0pt"></div>
+</body>
 </html>
